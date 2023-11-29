@@ -551,7 +551,6 @@ No banco de standby (linux07), criar redo logs adicionais:
 ```{.sql .numberLines}
 recover managed standby database cancel;
 alter system set standby_file_management=manual;
-alter database add logfile thread 2;
 alter database add logfile thread 2 size 200m;
 alter database add logfile thread 2 size 200m;
 alter database add logfile thread 2 size 200m;
