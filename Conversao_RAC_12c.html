@@ -910,7 +910,7 @@ clusterware:</p>
 <span id="cb28-4"><a href="#cb28-4"></a><span class="st">exit</span></span>
 <span id="cb28-5"><a href="#cb28-5"></a><span class="op">ENDEND</span></span>
 <span id="cb28-6"><a href="#cb28-6"></a></span>
-<span id="cb28-7"><a href="#cb28-7"></a><span class="fu">cp</span> <span class="va">$ORACLE_HOME</span>/dbs/orapwdb01 <span class="va">$ORACLE_HOME</span>/dbs/orapwdb012</span>
+<span id="cb28-7"><a href="#cb28-7"></a><span class="fu">cp</span> <span class="va">$ORACLE_HOME</span>/dbs/orapwdb01 <span class="va">$ORACLE_HOME</span>/dbs/orapwdb01</span>
 <span id="cb28-8"><a href="#cb28-8"></a></span>
 <span id="cb28-9"><a href="#cb28-9"></a><span class="ex">srvctl</span> add database                   <span class="dt">\</span></span>
 <span id="cb28-10"><a href="#cb28-10"></a>  <span class="at">-db</span> db01_prim                       <span class="dt">\</span></span>
@@ -918,7 +918,7 @@ clusterware:</p>
 <span id="cb28-12"><a href="#cb28-12"></a>  <span class="at">-dbtype</span> RAC                         <span class="dt">\</span></span>
 <span id="cb28-13"><a href="#cb28-13"></a>  <span class="at">-domain</span> world                       <span class="dt">\</span></span>
 <span id="cb28-14"><a href="#cb28-14"></a>  <span class="at">-spfile</span> <span class="st">&#39;+DATA/db01/spfiledb01.ora&#39;</span> <span class="dt">\</span></span>
-<span id="cb28-15"><a href="#cb28-15"></a>  <span class="at">-pwfile</span> <span class="va">$ORACLE_HOME</span>/dbs/orapwdb012 <span class="dt">\</span></span>
+<span id="cb28-15"><a href="#cb28-15"></a>  <span class="at">-pwfile</span> <span class="va">$ORACLE_HOME</span>/dbs/orapwdb01  <span class="dt">\</span></span>
 <span id="cb28-16"><a href="#cb28-16"></a>  <span class="at">-role</span> PRIMARY                       <span class="dt">\</span></span>
 <span id="cb28-17"><a href="#cb28-17"></a>  <span class="at">-dbname</span> db01</span>
 <span id="cb28-18"><a href="#cb28-18"></a></span>
@@ -1009,7 +1009,7 @@ clusterware:</p>
 <span id="cb38-4"><a href="#cb38-4"></a><span class="st">exit</span></span>
 <span id="cb38-5"><a href="#cb38-5"></a><span class="op">ENDEND</span></span>
 <span id="cb38-6"><a href="#cb38-6"></a></span>
-<span id="cb38-7"><a href="#cb38-7"></a><span class="fu">cp</span> <span class="va">$ORACLE_HOME</span>/dbs/orapwdb02 <span class="va">$ORACLE_HOME</span>/dbs/orapwdb022</span>
+<span id="cb38-7"><a href="#cb38-7"></a><span class="fu">cp</span> <span class="va">$ORACLE_HOME</span>/dbs/orapwdb02 <span class="va">$ORACLE_HOME</span>/dbs/orapwdb02</span>
 <span id="cb38-8"><a href="#cb38-8"></a></span>
 <span id="cb38-9"><a href="#cb38-9"></a><span class="ex">srvctl</span> add database                   <span class="dt">\</span></span>
 <span id="cb38-10"><a href="#cb38-10"></a>  <span class="at">-db</span> db02                            <span class="dt">\</span></span>
@@ -1017,7 +1017,7 @@ clusterware:</p>
 <span id="cb38-12"><a href="#cb38-12"></a>  <span class="at">-dbtype</span> RAC                         <span class="dt">\</span></span>
 <span id="cb38-13"><a href="#cb38-13"></a>  <span class="at">-domain</span> world                       <span class="dt">\</span></span>
 <span id="cb38-14"><a href="#cb38-14"></a>  <span class="at">-spfile</span> <span class="st">&#39;+DATA/db02/spfiledb01.ora&#39;</span> <span class="dt">\</span></span>
-<span id="cb38-15"><a href="#cb38-15"></a>  <span class="at">-pwfile</span> <span class="va">$ORACLE_HOME</span>/dbs/orapwdb022 <span class="dt">\</span></span>
+<span id="cb38-15"><a href="#cb38-15"></a>  <span class="at">-pwfile</span> <span class="va">$ORACLE_HOME</span>/dbs/orapwdb02  <span class="dt">\</span></span>
 <span id="cb38-16"><a href="#cb38-16"></a>  <span class="at">-role</span> PRIMARY                       <span class="dt">\</span></span>
 <span id="cb38-17"><a href="#cb38-17"></a>  <span class="at">-dbname</span> db02</span>
 <span id="cb38-18"><a href="#cb38-18"></a></span>
@@ -1138,8 +1138,8 @@ banco:</p>
 <span id="cb55-3"><a href="#cb55-3"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="va">$ORACLE_HOME</span>/bin:<span class="va">$PATH</span></span>
 <span id="cb55-4"><a href="#cb55-4"></a></span>
 <span id="cb55-5"><a href="#cb55-5"></a><span class="bu">cd</span> <span class="va">$ORACLE_HOME</span>/dbs</span>
-<span id="cb55-6"><a href="#cb55-6"></a><span class="fu">scp</span> linux06:/u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/orapwdb012 <span class="va">$ORACLE_HOME</span>/dbs/orapwdb011</span>
-<span id="cb55-7"><a href="#cb55-7"></a><span class="fu">scp</span> linux06:/u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/orapwdb022 <span class="va">$ORACLE_HOME</span>/dbs/orapwdb021</span>
+<span id="cb55-6"><a href="#cb55-6"></a><span class="fu">scp</span> linux06:/u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/orapwdb01 <span class="va">$ORACLE_HOME</span>/dbs/orapwdb01</span>
+<span id="cb55-7"><a href="#cb55-7"></a><span class="fu">scp</span> linux06:/u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/orapwdb02 <span class="va">$ORACLE_HOME</span>/dbs/orapwdb02</span>
 <span id="cb55-8"><a href="#cb55-8"></a></span>
 <span id="cb55-9"><a href="#cb55-9"></a><span class="ex">srvctl</span> add instance <span class="at">-db</span> db01_prim <span class="at">-instance</span> db011 <span class="at">-node</span> linux05</span>
 <span id="cb55-10"><a href="#cb55-10"></a><span class="ex">srvctl</span> add instance <span class="at">-db</span> db02 <span class="at">-instance</span> db021 <span class="at">-node</span> linux05</span>

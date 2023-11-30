@@ -526,7 +526,7 @@ shutdown immediate
 exit
 ENDEND
 
-cp $ORACLE_HOME/dbs/orapwdb01 $ORACLE_HOME/dbs/orapwdb012
+cp $ORACLE_HOME/dbs/orapwdb01 $ORACLE_HOME/dbs/orapwdb01
 
 srvctl add database                   \
   -db db01_prim                       \
@@ -534,7 +534,7 @@ srvctl add database                   \
   -dbtype RAC                         \
   -domain world                       \
   -spfile '+DATA/db01/spfiledb01.ora' \
-  -pwfile $ORACLE_HOME/dbs/orapwdb012 \
+  -pwfile $ORACLE_HOME/dbs/orapwdb01  \
   -role PRIMARY                       \
   -dbname db01
 
@@ -663,7 +663,7 @@ shutdown immediate
 exit
 ENDEND
 
-cp $ORACLE_HOME/dbs/orapwdb02 $ORACLE_HOME/dbs/orapwdb022
+cp $ORACLE_HOME/dbs/orapwdb02 $ORACLE_HOME/dbs/orapwdb02
 
 srvctl add database                   \
   -db db02                            \
@@ -671,7 +671,7 @@ srvctl add database                   \
   -dbtype RAC                         \
   -domain world                       \
   -spfile '+DATA/db02/spfiledb01.ora' \
-  -pwfile $ORACLE_HOME/dbs/orapwdb022 \
+  -pwfile $ORACLE_HOME/dbs/orapwdb02  \
   -role PRIMARY                       \
   -dbname db02
 
@@ -860,8 +860,8 @@ export ORACLE_HOME=/u01/app/oracle/product/12.1.0.2/dbhome_1
 export PATH=$ORACLE_HOME/bin:$PATH
 
 cd $ORACLE_HOME/dbs
-scp linux06:/u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/orapwdb012 $ORACLE_HOME/dbs/orapwdb011
-scp linux06:/u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/orapwdb022 $ORACLE_HOME/dbs/orapwdb021
+scp linux06:/u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/orapwdb01 $ORACLE_HOME/dbs/orapwdb01
+scp linux06:/u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/orapwdb02 $ORACLE_HOME/dbs/orapwdb02
 
 srvctl add instance -db db01_prim -instance db011 -node linux05
 srvctl add instance -db db02 -instance db021 -node linux05
