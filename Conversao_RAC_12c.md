@@ -526,8 +526,6 @@ shutdown immediate
 exit
 ENDEND
 
-cp $ORACLE_HOME/dbs/orapwdb01 $ORACLE_HOME/dbs/orapwdb01
-
 srvctl add database                   \
   -db db01_prim                       \
   -oraclehome $ORACLE_HOME            \
@@ -633,8 +631,7 @@ db021.undo_tablespace=UNDOTBS1
 db022.undo_tablespace=UNDOTBS2
 db021.thread=1
 db022.thread=2
-cluster_database=true
-cluster_database_instances=2
+cluster_database=truecluster_database_instances=2
 remote_listener="rac01-scan:1521"
 ```
 
@@ -663,14 +660,12 @@ shutdown immediate
 exit
 ENDEND
 
-cp $ORACLE_HOME/dbs/orapwdb02 $ORACLE_HOME/dbs/orapwdb02
-
 srvctl add database                   \
   -db db02                            \
   -oraclehome $ORACLE_HOME            \
   -dbtype RAC                         \
   -domain world                       \
-  -spfile '+DATA/db02/spfiledb01.ora' \
+  -spfile '+DATA/db02/spfiledb02.ora' \
   -pwfile $ORACLE_HOME/dbs/orapwdb02  \
   -role PRIMARY                       \
   -dbname db02
