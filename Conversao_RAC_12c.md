@@ -864,7 +864,7 @@ srvctl add instance -db db02 -instance db021 -node linux05
 echo "db011:$ORACLE_HOME:N" >> /etc/oratab
 echo "db021:$ORACLE_HOME:N" >> /etc/oratab
 
-echo "spfile=+DATA/db02/spfiledb02.ora" > $ORACLE_HOME/dbs/initdb011.ora
+echo "spfile=+DATA/db01/spfiledb01.ora" > $ORACLE_HOME/dbs/initdb011.ora
 echo "spfile=+DATA/db02/spfiledb02.ora" > $ORACLE_HOME/dbs/initdb021.ora
 
 srvctl modify service -db db01_prim -service db01_app.world -modifyconfig -preferred "db011,db012"
